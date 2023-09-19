@@ -3,6 +3,7 @@
     "id": "b08e31ti03bal5y828ncdon5",
     "name": "israel",
     "money": 0,
+    "location": "Jerusalem",
     "items": {
       "copper": 0,
       "silver": 0,

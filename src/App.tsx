@@ -19,6 +19,7 @@ export default function App() {
             <div key={playerInfo.id}>
               <h2>{playerInfo.name}</h2>
               <p>money: {playerInfo.money}</p>
+              <p>location: {playerInfo.location}</p>
               <h3>items:</h3>
               <ul>
                 <li>copper: {playerInfo.items.copper}</li>

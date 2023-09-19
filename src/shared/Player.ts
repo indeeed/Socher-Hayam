@@ -14,9 +14,17 @@ export class Player {
   money = 0;
 
   @Fields.object()
+  location = Location["Jerusalem"];
+
+  @Fields.object()
   items = Items;
 }
 
+export enum Location {
+  "Jerusalem",
+  "Haifa",
+  "Tel-Aviv",
+}
 export enum Items {
   copper = 0,
   silver = 0,
