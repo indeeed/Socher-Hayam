@@ -3,7 +3,8 @@ import { api } from "./api";
 
 const app = express();
 
+app.get("/api/hi", (req, res) => res.send("Hello"));
+
 app.use(api);
 
-app.get("/api/hi", (req, res) => res.send("Hello"));
 app.listen(3002, () => console.log("Server started"));

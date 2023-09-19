@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { remult } from "remult";
+import { Player } from "./shared/Player";
 
-function App() {
-  const [count, setCount] = useState(0)
+const PlayerRepo = remult.repo(Player);
 
+export default function App() {
+  const [player, setPlayer] = useState<Player[]>([]);
+
+  useEffect(() => {
+    PlayerRepo.find().then(setPlayer);
+  }, []);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="player-info">
+      <h1>player</h1>
+      <main>
+        {player.map((playerInfo) => {
+          return (
+            <div key={playerInfo.id}>
+              <h2>{playerInfo.name}</h2>
+              <p>money: {playerInfo.money}</p>
+              <h3>items:</h3>
+              <ul>
+                <li>copper: {playerInfo.items.copper}</li>
+                <li>silver: {playerInfo.items.silver}</li>
+                <li>gold: {playerInfo.items.gold}</li>
+              </ul>
+            </div>
+          );
+        })}
+      </main>
+    </div>
+  );
 }
-
-export default App

@@ -1,3 +1,7 @@
 import { remultExpress } from "remult/remult-express";
 
-export const api = remultExpress();
+import { Player } from "../shared/Player";
+
+export const api = remultExpress({
+  entities: [Player],
+});
