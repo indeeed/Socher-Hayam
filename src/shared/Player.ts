@@ -26,7 +26,7 @@ export enum Location {
   "Tel-Aviv",
 }
 export enum Items {
-  copper = 0,
-  silver = 0,
+  wood = 0,
   gold = 0,
+  diamond = 0,
 }

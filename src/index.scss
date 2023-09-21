@@ -1,0 +1,47 @@
+@import 'bootstrap/scss/bootstrap';
+
+$bg: #194158;
+$bg-dark: #0d2230;
+
+$color: #fff;
+$game-font: 'Mitr', sans-serif;
+// font-family: 'Mitr', sans-serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+li{
+  list-style: none;
+}
+
+
+.app{
+  background: $bg;
+  color: $color;
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+}
+.player-info{
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  
+}
+
+.footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.icon{
+  margin: 10px;
+  padding: 10px;
+  background: $bg-dark;
+  font-size: 50px;
+  box-shadow: 0 2px 4px #00000033;
+  border-radius: 50%;
+  // width: 30px;
+  // height: 30px;
+  // line-height: 30px;
+ 
+}
