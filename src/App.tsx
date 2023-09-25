@@ -6,12 +6,19 @@ import Container from "react-bootstrap/Container";
 import Footer from "./components/Footer";
 // import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
-import { GiCargoShip } from "react-icons/gi";
-import { GiMoneyStack } from "react-icons/gi";
-import { GiTreasureMap } from "react-icons/gi";
-import { GiBlackBar } from "react-icons/gi";
-import { GiWoodPile } from "react-icons/gi";
-import { GiCutDiamond } from "react-icons/gi";
+// import { GiCargoShip } from "react-icons/gi";
+// import { GiMoneyStack } from "react-icons/gi";
+// import { GiTreasureMap } from "react-icons/gi";
+
+import {
+  GiCargoShip,
+  GiMoneyStack,
+  GiTreasureMap,
+  GiLockedChest,
+  GiWoodPile,
+  GiMetalBar,
+  GiCutDiamond,
+} from "react-icons/gi";
 
 const PlayerRepo = remult.repo(Player);
 
@@ -33,28 +40,30 @@ export default function App() {
               return (
                 <div key={playerInfo.id}>
                   <h2>{playerInfo.name}</h2>
-                  <p>
-                    <GiCargoShip className="icon" />
-                  </p>
-                  <p>
-                    <GiMoneyStack className="icon" />
-                    {playerInfo.money}
-                  </p>
-                  <p>
-                    <GiTreasureMap className="icon" /> {playerInfo.location}
-                  </p>
-                  <h3>items:</h3>
                   <ul>
+                    <li className="icon">
+                      <GiCargoShip /> 200
+                    </li>
+                    <li className="icon">
+                      <GiMoneyStack /> {playerInfo.money}
+                    </li>
+                    <li className="icon">
+                      <GiTreasureMap /> {playerInfo.location}
+                    </li>
+                  </ul>
+
+                  <ul className="icon">
+                    {/* <li>
+                      <GiLockedChest /> {">"}
+                    </li> */}
                     <li>
-                      <GiWoodPile className="icon" />
-                      {playerInfo.items.wood}
+                      <GiWoodPile /> {playerInfo.items.wood}
                     </li>
                     <li>
-                      <GiBlackBar className="icon" /> {playerInfo.items.gold}
+                      <GiMetalBar /> {playerInfo.items.gold}
                     </li>
                     <li>
-                      <GiCutDiamond className="icon" />
-                      {playerInfo.items.diamond}
+                      <GiCutDiamond /> {playerInfo.items.diamond}
                     </li>
                   </ul>
                 </div>

@@ -20,12 +20,7 @@ li{
   font-family: 'Rubik', sans-serif;
   height: 100vh;
 }
-.player-info{
-  width: 300px;
-  margin: auto;
-  padding: 10px;
-  
-}
+
 
 .footer{
   width: 100%;
@@ -34,14 +29,21 @@ li{
 }
 
 .icon{
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 0.5rem;
   background: $bg-dark;
-  font-size: 50px;
+  font-size: 1.4rem;
   box-shadow: 0 2px 4px #00000033;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   // width: 30px;
   // height: 30px;
   // line-height: 30px;
  
+}
+
+.main{
+  li{
+    display: inline-block;
+    padding: 0 0.5rem;
+  }
 }
